@@ -74,5 +74,5 @@ echo 'source $HOME/.bashrc'
 MESSAGE="After sourcing bashrc : You can verify the versions as below  \n"; blue_echo
 echo 'node -v '
 echo 'npm -v '
-
+cd $HOME
 $HOME/local/node/bin/npm install -g forever
