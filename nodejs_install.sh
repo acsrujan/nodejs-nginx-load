@@ -75,4 +75,4 @@ MESSAGE="After sourcing bashrc : You can verify the versions as below  \n"; blue
 echo 'node -v '
 echo 'npm -v '
 
-echo 'npm install -g forever'
+npm install -g forever
