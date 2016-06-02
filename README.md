@@ -10,7 +10,7 @@ i.  Start the new nginx server (listen to port 80).
 
 ii. create node.js environment.
 
-iv. pull git repo  and start server (it will start on 8080 port)
+iv. pull git repo (nodejs hello world) and start server (it will start on 8080 port)
 
 v. add this node.js server process to load balancer.
 
@@ -22,6 +22,7 @@ vi. If number of request fall below 100 requests/minute then stop node.js server
 Clone this repo to /var/www.
 
 Run run.sh for doing installation and setting up upstart jobs.
+Replace test.com with your domain name or enter it in /etc/hosts.
 
 ###Testing status
 Manually tested on localhost.
