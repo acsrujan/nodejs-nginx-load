@@ -10,7 +10,7 @@ start_new_node() {
    port = $[port+INCREMENT]
    isfree=$(netstat -tapln | grep $port)
   done
-  PORT=$isfree forever start /var/www/hello-world-node/main.js
+  PORT=$isfree forever start $HOME/hello-world-node/main.js
   echo "server 127.0.0.1:$isfree max_fails=0 fail_timeout=10s weight=1" >> /etc/nginx/upstream.conf
   sed -i -e '/##START_SERVERS/,/##END_SERVERS/{//!d;/##START_SERVERS/r /etc/nginx/upstream.conf' -e '}' /etc/nginx/nginx.conf
  service nginx reload
@@ -24,7 +24,7 @@ stop_new_node() {
   #Condition to be handled: Ensure that all servers aren't killed.
   if [ "$lastport" -ne 8080]
   then
-    PORT=$lastport forever stop /var/www/hello-world-node/main.js
+    PORT=$lastport forever stop $HOME/hello-world-node/main.js
   fi
   sed "/$PORT/d" /etc/nginx/upstream.conf
   sed "/$PORT/d" /etc/nginx/conf.d/nodejs.conf
