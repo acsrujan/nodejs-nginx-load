@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo nginx_install.sh
-sudo nodejs_install.sh
+/bin/bash nginx_install.sh
+/bin/bash nodejs_install.sh
 sudo touch /etc/nginx/upstream.conf
 mkdir -p /var/www/
 cd /var/www/
