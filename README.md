@@ -19,7 +19,9 @@ vi. if load balancer getting 100 requests/minute then spin up new node.js server
 vi. If number of request fall below 100 requests/minute then stop node.js server process. Server which is most recently created should stop.
 
 ###Clone and start
-Clone this repo to /var/www.
+Clone this repo in home folder.
+
+Nodejs is installed in non sudo current user.
 
 Run run.sh for doing installation and setting up upstart jobs.
 Replace test.com with your domain name or enter it in /etc/hosts.
