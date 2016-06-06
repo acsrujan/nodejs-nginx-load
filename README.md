@@ -23,12 +23,17 @@ Clone this repo in home folder.
 
 Nodejs is installed in non sudo current user.
 
-Run run.sh for doing installation and setting up upstart jobs.
-Replace test.com with your domain name or enter it in /etc/hosts.
 
-###Testing status
-Manually tested on localhost.
-Production environment testing - pending.
+To install:
+`ssh ubuntu@ip < install.sh`
+This installs nginx, nodejs, forever, etc. as required.
+
+To configure:
+`ssh ubuntu@ip < config.sh`
+
+To deploy:
+`ssh-add /path/to/privatekey_which_has_access_to_git_repo`
+`ssh -A ubuntu@ip < deploy.sh`
 
 ###Approaches
 1. Nginx to do load balancing. Uses upstream.
