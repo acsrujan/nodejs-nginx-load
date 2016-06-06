@@ -1,4 +1,8 @@
 #!/bin/bash
+sudo apt-get update
+sudo apt-get install -y openssh-server libssl-dev git g++ make python-software-properties unzip
+sudo apt-get install -y nginx nginx-extras
+#!/bin/bash
 # This script installs node in ' $HOME/local/node ' directory without sudo
 
 # Store script's filename in $SELF_NAME
@@ -73,3 +77,5 @@ echo 'source $HOME/.bashrc'
 
 cd $HOME
 $HOME/local/node/bin/npm install -g forever
+
+sudo ln -s "$(which node)" /usr/bin/node
