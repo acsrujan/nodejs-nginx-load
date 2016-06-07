@@ -78,4 +78,6 @@ echo 'source $HOME/.bashrc'
 cd $HOME
 $HOME/local/node/bin/npm install -g forever
 
+
+source $HOME/.bashrc
 sudo ln -s "$(which node)" /usr/bin/node
