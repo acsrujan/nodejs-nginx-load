@@ -31,9 +31,9 @@ stop_new_node() {
   service nginx reload
 }
 
-output1=`wget -O -q -t 3 -T 3 http://test.com/basic_status`
+output1=`wget -O- -q -t 3 -T 3 http://test.com/basic_status`
 sleep 60
-output2=`wget -O -q -t 3 T 3 http://test.com/basic_status`
+output2=`wget -O- -q -t 3 T 3 http://test.com/basic_status`
 
 tmp1_reqpmin=`echo ${output1}|awk '{print $10}'`
 tmp2_reqpmin=`echo ${output2}|awk '{print $10}'`
